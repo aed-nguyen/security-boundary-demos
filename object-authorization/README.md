@@ -1,8 +1,5 @@
 # Object authorization
 
-The unsafe example returns a record when its identifier is known. It never checks whether the current account owns that record.
+Identifier-only lookup returns a record without checking who owns it.
 
-The corrected version includes ownership in the lookup and rejects a record belonging to another account.
-
-The tests read a record owned by the current account. They then repeat the request with an identifier belonging to a different account and show the corrected path rejecting it.
-
+`getRecordForOwner()` includes the account in the lookup. The tests read a record belonging to the current account and reject the same request with another account's record identifier.

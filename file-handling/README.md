@@ -1,8 +1,5 @@
 # File handling
 
-The unsafe example trusts a filename because it ends with an image extension. That says nothing about the path or declared media type. It also ignores the file size.
+An image extension alone doesn't establish the file path, declared media type, or size.
 
-The corrected version checks that the filename is only a filename. It applies a size limit and requires an allowed media type whose extension matches.
-
-The tests accept a bounded PNG. They reject HTML with an image name, a path disguised as a filename, and an oversized file.
-
+`ensureSafeUpload()` requires a plain filename, limits the file size, and checks the extension against an allowed media type. The tests cover a bounded PNG, HTML with an image name, a path disguised as a filename, and an oversized file.

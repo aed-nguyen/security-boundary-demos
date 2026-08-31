@@ -7,7 +7,7 @@
 - [`manpage/`](manpage): parameterized 32-bit payload builders and the verified `LD_AUDIT` trigger
 - [`malware-analysis-lab/`](malware-analysis-lab): UPX unpacking, a Python PE/indicator extractor, YARA and Sigma rules, and an Atomic Red Team service-installation test
 
-The targets came from [OverTheWire](https://overthewire.org/). No game credentials are included.
+The Vortex and Manpage targets came from [OverTheWire](https://overthewire.org/).
 
 ## Boundary demos
 
