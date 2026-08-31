@@ -1,12 +1,12 @@
 # Security boundary demos
 
-I built these four small examples for this repository. Each one puts an unsafe shortcut beside a safer implementation. The tests show the difference.
+I built four small examples that put an unsafe shortcut beside a safer implementation. The tests show the difference.
 
-Everything in the examples is invented. That includes the hosts and account identifiers. The transactions, records, files, and secrets are synthetic too.
+The examples use invented hosts, account identifiers, transactions, records, files, and secrets.
 
 The unsafe functions are included only for comparison and shouldn't be copied into a real system.
 
-## The four demos
+## Demos
 
 - [URL trust boundaries](url-boundary): a trusted-looking string prefix isn't the same as a validated destination
 - [Object authorization](object-authorization): knowing a record identifier doesn't prove that the current account owns it
