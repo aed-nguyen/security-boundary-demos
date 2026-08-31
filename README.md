@@ -1,24 +1,26 @@
-# Security boundary demos
+# Security Lab Code
 
-I built four small examples that put an unsafe shortcut beside a safer implementation. The tests show the difference.
+## Lab tooling
 
-The examples use invented hosts, account identifiers, transactions, records, files, and secrets.
+- [`vortex16/`](vortex16): digest recovery from similarity scores and a Metal MD5 search
+- [`vortex5/`](vortex5): threaded five-character MD5 search in C
+- [`manpage/`](manpage): parameterized 32-bit payload builders and the verified `LD_AUDIT` trigger
 
-The unsafe functions are included only for comparison and shouldn't be copied into a real system.
+The targets came from [OverTheWire](https://overthewire.org/). No game credentials are included.
 
-## Demos
+## Boundary demos
 
-- [URL trust boundaries](url-boundary): a trusted-looking string prefix isn't the same as a validated destination
-- [Object authorization](object-authorization): knowing a record identifier doesn't prove that the current account owns it
-- [Authentication-proof binding](auth-proof-binding): a proof needs to be bound to the action and exact transaction
-- [File handling](file-handling): a trusted-looking extension isn't enough to accept a file
+- [`url-boundary/`](url-boundary): parsed URL validation
+- [`object-authorization/`](object-authorization): owner-bound record access
+- [`auth-proof-binding/`](auth-proof-binding): transaction-bound authentication proofs
+- [`file-handling/`](file-handling): upload path, media type, extension, and size checks
 
-## Run the tests
-
-You need a current Node.js release. From the repository root:
+## Tests
 
 ```sh
 npm test
+python3 -m pip install -r requirements.txt
+python3 -m unittest discover -s tests
+cc -std=c11 -O3 -pthread vortex5/md5Search.c -o /tmp/md5-search
+/tmp/md5-search 594f803b380a41396ed63dca39503542 2
 ```
-
-The suite exercises the unsafe behaviour and the corrected path. A passing run means these examples behave as documented.
