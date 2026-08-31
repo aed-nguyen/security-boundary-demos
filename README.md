@@ -5,7 +5,7 @@
 - [`vortex16/`](vortex16): digest recovery from similarity scores and a Metal MD5 search
 - [`vortex5/`](vortex5): threaded five-character MD5 search in C
 - [`manpage/`](manpage): parameterized 32-bit payload builders and the verified `LD_AUDIT` trigger
-- [`malware-analysis-lab/`](malware-analysis-lab): contained static reverse engineering, an extractor, ATT&CK mapping, YARA and Sigma detections, and a verified Atomic Red Team service simulation
+- [`malware-analysis-lab/`](malware-analysis-lab): UPX unpacking, a Python PE/indicator extractor, YARA and Sigma rules, and an Atomic Red Team service-installation test
 
 The targets came from [OverTheWire](https://overthewire.org/). No game credentials are included.
 
